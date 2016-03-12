@@ -272,7 +272,7 @@ void LightingTechnique::SetMatSpecularPower( float Power )
 	glUniform1f( matSpecularPowerLocation, Power );
 }
 
-void LightingTechnique::SetPointLights( unsigned NumLights, const PointLight* pLights )
+void LightingTechnique::SetPointLights( unsigned int NumLights, const PointLight* pLights )
 {
 	glUniform1i( numPointLightsLocation, NumLights );
 

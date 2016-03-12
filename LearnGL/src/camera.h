@@ -33,11 +33,6 @@ private:
 	float				angleH;
 	float				angleV;
 
-	bool				OnUpperEdge;
-	bool				OnLowerEdge;
-	bool				OnLeftEdge;
-	bool				OnRightEdge;
-
 	Vector2i			mousePos;
 };
 

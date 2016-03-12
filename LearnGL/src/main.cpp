@@ -61,16 +61,14 @@ class Main : public ICallbacks
 		{
 			unsigned long token;
 
-			Vector3f Pos( 0.0f, 0.0f, -3.0f );
+			Vector3f Pos( 0.0f, 0.0f, 0.0f );
 			Vector3f Target( 0.0f, 0.0f, 1.0f );
 			Vector3f Up( 0.0, 1.0f, 0.0f );
 
 			pGameCamera = new Camera( WINDOW_WIDTH, WINDOW_HEIGHT, Pos, Target, Up );
 
-			unsigned int Indices[] = {	0, 3, 1,
-										1, 3, 2,
-										2, 3, 0,
-										1, 2, 0  };
+			unsigned int Indices[] = {	0, 2, 1,
+										0, 3, 2  };
 
 			CreateIndexBuffer( Indices, sizeof( Indices ) );
 			CreateVertexBuffer( Indices, ARRAY_SIZE_IN_ELEMENTS( Indices ) );
@@ -99,6 +97,9 @@ class Main : public ICallbacks
 				return false;
 			}
 
+			printf( "Warning: Cursor is hidden!\n" );
+			glutSetCursor( GLUT_CURSOR_NONE );
+
 			return true;
 		}
 
@@ -113,7 +114,7 @@ class Main : public ICallbacks
 
 			glClear( GL_COLOR_BUFFER_BIT );
 
-			scale += 0.02f;
+			scale += 0.01f;
 
 			// Точечные источники света.
 			PointLight pl[3];
@@ -150,7 +151,7 @@ class Main : public ICallbacks
 			pEffect->SetDirectionalLight( directionalLight );
 			pEffect->SetEyeWorldPos( pGameCamera->GetPos() );
 			pEffect->SetMatSpecularIntensity( 1.0f );
-			pEffect->SetMatSpecularPower( 100 );
+			pEffect->SetMatSpecularPower( 32 );
 
 			glEnableVertexAttribArray( 0 );
 			glEnableVertexAttribArray( 1 );
