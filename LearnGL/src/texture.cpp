@@ -1,11 +1,11 @@
-#include "texture.h"
+п»ї#include "texture.h"
 #include <GL/glew.h>
 #include <objidl.h>
 #include <gdiplus.h>
 
 using namespace Gdiplus;
 
-// Нужно придумать, как отлавливать и показывать ошибки загрузки.
+// РќСѓР¶РЅРѕ РїСЂРёРґСѓРјР°С‚СЊ, РєР°Рє РѕС‚Р»Р°РІР»РёРІР°С‚СЊ Рё РїРѕРєР°Р·С‹РІР°С‚СЊ РѕС€РёР±РєРё Р·Р°РіСЂСѓР·РєРё.
 
 #define loop(v,m) for(int v = 0; v<(m); v++)
 #define loopi(m)  loop(i,m)

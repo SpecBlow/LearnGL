@@ -1,4 +1,4 @@
-#include "technique.h"
+п»ї#include "technique.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -36,7 +36,7 @@ bool Technique::Init()
 	return true;
 }
 
-//Используем этот метод для добавления шейдеров в программу. Когда заканчиваем - вызываем finalize()
+// РСЃРїРѕР»СЊР·СѓРµРј СЌС‚РѕС‚ РјРµС‚РѕРґ РґР»СЏ РґРѕР±Р°РІР»РµРЅРёСЏ С€РµР№РґРµСЂРѕРІ РІ РїСЂРѕРіСЂР°РјРјСѓ. РљРѕРіРґР° Р·Р°РєР°РЅС‡РёРІР°РµРј - РІС‹Р·С‹РІР°РµРј finalize()
 bool Technique::AddShader( unsigned int ShaderType, const char* pShaderText )
 {
 	GLuint ShaderObj = glCreateShader( ShaderType );
@@ -47,7 +47,7 @@ bool Technique::AddShader( unsigned int ShaderType, const char* pShaderText )
 		return false;
 	}
 
-	// Сохраним объект шейдера - он будет удален в декструкторе
+	// РЎРѕС…СЂР°РЅРёРј РѕР±СЉРµРєС‚ С€РµР№РґРµСЂР° - РѕРЅ Р±СѓРґРµС‚ СѓРґР°Р»РµРЅ РІ РґРµРєСЃС‚СЂСѓРєС‚РѕСЂРµ
 	shaderObjList.push_back( ShaderObj );
 
 	const GLchar* p[1];
@@ -74,8 +74,8 @@ bool Technique::AddShader( unsigned int ShaderType, const char* pShaderText )
 	return true;
 }
 
-// После добавления всех шейдеров в программу вызываем эту функцию
-// для линковки и проверки программы на ошибки
+// РџРѕСЃР»Рµ РґРѕР±Р°РІР»РµРЅРёСЏ РІСЃРµС… С€РµР№РґРµСЂРѕРІ РІ РїСЂРѕРіСЂР°РјРјСѓ РІС‹Р·С‹РІР°РµРј СЌС‚Сѓ С„СѓРЅРєС†РёСЋ
+// РґР»СЏ Р»РёРЅРєРѕРІРєРё Рё РїСЂРѕРІРµСЂРєРё РїСЂРѕРіСЂР°РјРјС‹ РЅР° РѕС€РёР±РєРё
 bool Technique::Finalize() 
 {
 	GLint Success = 0;
@@ -101,7 +101,7 @@ bool Technique::Finalize()
 		return false;
 	}
 
-	// Удаляем промежуточные объекты шейдеров, которые были добавлены в программу
+	// РЈРґР°Р»СЏРµРј РїСЂРѕРјРµР¶СѓС‚РѕС‡РЅС‹Рµ РѕР±СЉРµРєС‚С‹ С€РµР№РґРµСЂРѕРІ, РєРѕС‚РѕСЂС‹Рµ Р±С‹Р»Рё РґРѕР±Р°РІР»РµРЅС‹ РІ РїСЂРѕРіСЂР°РјРјСѓ
 	for ( auto it = shaderObjList.begin(); it != shaderObjList.end(); ++it ) 
 	{
 		glDeleteShader( *it );

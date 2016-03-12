@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #ifndef LIGHTINGTECHNIQUE_H
 #define LIGHTINGTECHNIQUE_H

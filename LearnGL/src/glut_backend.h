@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 
 #ifndef GLUT_BACKEND_H
 #define GLUT_BACKEND_H
