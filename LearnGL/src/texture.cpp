@@ -25,6 +25,9 @@ bool Texture::Load()
 {
 	unsigned int *data = LoadFile( fileName, width, height );
 	
+	if (width == 0 || height == 0)
+		return false;
+
 	glGenTextures	( 1, &textureID );
 	glBindTexture	( textureTarget, textureID );
 	glTexImage2D	( textureTarget, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data );

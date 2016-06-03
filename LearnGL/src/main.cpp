@@ -94,7 +94,7 @@ class Main : public ICallbacks
 			if ( !pTexture->Load() ) 
 			{
 				printf( "Textura: '%s' - not loaded!\n","test.png" );
-				return false;
+				//return false;
 			}
 
 			printf( "Warning: Cursor is hidden!\n" );
