@@ -11,6 +11,7 @@
 *.userprefs
 
 !glew32.dll
+!*.vcxproj.user
 
 # Build results
 [Dd]ebug/
