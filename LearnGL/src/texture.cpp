@@ -7,10 +7,10 @@ using namespace Gdiplus;
 
 // Нужно придумать, как отлавливать и показывать ошибки загрузки.
 
-#define loop(v,m) for(int v = 0; v<(m); v++)
-#define loopi(m)  loop(i,m)
-#define loopj(m)  loop(j,m)
-#define RGBA( r, g, b, a)     ( (DWORD)( (((DWORD)(BYTE)(a))<<24 ) | RGB( r, g, b ) ) )
+#define loop( v, m )	for( int v = 0; v < m; v++ )
+#define loopi( m )		loop( i, m )
+#define loopj( m )		loop( j, m )
+#define RGBA( r, g, b, a )     ( (DWORD)( ( ( (DWORD)(BYTE)(a) ) << 24 ) | RGB( r, g, b ) ) )
 
 Texture::Texture( unsigned int TextureTarget, const std::string& FileName ):
 	fileName		( FileName ),
