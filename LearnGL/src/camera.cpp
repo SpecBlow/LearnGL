@@ -1,4 +1,4 @@
-﻿#include <GL/glut.h>
+﻿#include <GL/freeglut.h>
 #include "camera.h"
 #include <math.h>
 

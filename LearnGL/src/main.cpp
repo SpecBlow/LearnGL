@@ -1,8 +1,16 @@
 ﻿#pragma once
+#define NOMINMAX
+#include <algorithm>
+namespace Gdiplus
+{
+	using std::min;
+	using std::max;
+};
+
 #include "texture.h"
 
 #include <GL/glew.h>
-#include <GL/glut.h>
+#include <GL/freeglut.h>
 #include <objidl.h>
 #include <gdiplus.h>
 
@@ -59,7 +67,7 @@ class Main : public ICallbacks
 
 		bool Init()
 		{
-			unsigned long token;
+			ULONG_PTR token;
 
 			Vector3f Pos( 0.0f, 0.0f, 0.0f );
 			Vector3f Target( 0.0f, 0.0f, 1.0f );
