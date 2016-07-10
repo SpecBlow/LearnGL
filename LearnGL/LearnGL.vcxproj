@@ -69,22 +69,22 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>G:\Projects\LeanGL\LearnGL\Engine\include;$(IncludePath)</IncludePath>
-    <LibraryPath>G:\Projects\LeanGL\LearnGL\Engine\lib\Release\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Engine\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Engine\lib\Release\x86;$(LibraryPath)</LibraryPath>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
     <OutDir>..\Game\$(Configuration)_x86\</OutDir>
     <IntDir>..\Temp\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>G:\Projects\LeanGL\LearnGL\Engine\include;$(IncludePath)</IncludePath>
-    <LibraryPath>G:\Projects\LeanGL\LearnGL\Engine\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Engine\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Engine\lib\Release\x64;$(LibraryPath)</LibraryPath>
     <OutDir>..\Game\$(Configuration)_x64\</OutDir>
     <IntDir>..\Temp\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <IncludePath>G:\Projects\LeanGL\LearnGL\Engine\include;$(IncludePath)</IncludePath>
-    <LibraryPath>G:\Projects\LeanGL\LearnGL\Engine\lib\Release\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Engine\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Engine\lib\Release\x86;$(LibraryPath)</LibraryPath>
     <GenerateManifest>false</GenerateManifest>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
     <IntDir>..\Temp\$(Configuration)\</IntDir>
@@ -94,8 +94,8 @@
     <OutDir>..\Game\$(Configuration)_x64\</OutDir>
     <IntDir>..\Temp\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_$(Configuration)</TargetName>
-    <IncludePath>G:\Projects\LeanGL\LearnGL\Engine\include;$(IncludePath)</IncludePath>
-    <LibraryPath>G:\Projects\LeanGL\LearnGL\Engine\lib\Release\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)Engine\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Engine\lib\Release\x64;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

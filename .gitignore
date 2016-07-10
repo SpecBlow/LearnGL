@@ -241,5 +241,5 @@ LearnGL_Debug.exe
 LearnGL_Release.exe
 
 !*.lib
-Game/Release_x86/LearnGL_Release.ipdb
-Game/Release_x86/LearnGL_Release.iobj
+*.ipdb
+*.iobj
